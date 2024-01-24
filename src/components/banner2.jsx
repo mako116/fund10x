@@ -5,10 +5,10 @@ import swift from "../../public/images/Frame 2389.svg"
   const Banner2 = () => {
   return (
     <>
-      <div className="w-full h-full bg-img py-[30px] px-[30px] inter">
+      <div className="w-full h-full bg-img py-[30px] px-[30px] inter text-[#000]">
       <div className=" justify-center gap-[40px] lg:gap-[140px] lg:mt-[160px] mt-[0px] flex lg:flex-row flex-col items-center">     
       <div className="lg:w-[600px] w-full h-[160px] lg:h-[366.73px] lg:gap-[32px] lg:mt-[0px] mt-[70px] items-center">
-      <h3 className=' font-normal lg:text-[24.44px] leading-[35.57px]'>Explore the financial revolution by backing innovative fintech solutions and shape the future of banking..</h3>
+      <h3 className=' font-normal lg:text-[24.44px] leading-[35.57px] text-[#000]'>Explore the financial revolution by backing innovative fintech solutions and shape the future of banking..</h3>
       <div className="flex gap-[13.07px] max-width-[600px] items-center justify-center lg:justify-start lg:items-start text-start flex-wrap my-[20px] py-[10px]">
       <div className='flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]'>
        <p className='inter text-[18.07px] font-style font-normal leading-normal text-[#404040]'> AI</p>

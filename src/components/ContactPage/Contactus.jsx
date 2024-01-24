@@ -41,7 +41,7 @@ const Contactus = () => {
     {selectedHeader === 'For_Investors' && (
         <div className="text-[#000]">
         <form className='lg:w-[634px] w-[330px] lg:h-[843px]'>
-        <div className="p-[15px] lg:p-[50px] border-[2px] border-[#000] rounded-[20px] bg-[#fff]"> 
+        <div className="p-[15px] lg:p-[30px] border-[2px] border-[#000] rounded-[20px] bg-[#fff]"> 
         <label>Full Name</label>
          <input type="text" className='my-[10px] w-[290px] lg:w-[563px] h-[63px] rounded-[10px] bg-lightb text-[#000] outline-none p-[2px]'/>
          <label> Legal Business name</label>
@@ -63,7 +63,7 @@ const Contactus = () => {
          </div>
          </div>
          <div className="flex justify-center my-[40px]">
-         <div className="flex items-center w-[233.21px] my-[40px] h-[71.41px] rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-linear2 shadowed text-center ">
+         <div className="flex items-center cursor-pointer w-[233.21px] my-[40px] h-[71.41px] rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-linear2 shadowed text-center ">
        <button className=' text-[21.44px] ml-[80px] leading-[21.72px] font-medium text-[#fff]'>Submit</button>
        </div>
          </div>
@@ -74,7 +74,7 @@ const Contactus = () => {
       {selectedHeader === 'For_Businesses' && (
         <div className="text-[#000]">
         <form className='lg:w-[634px] w-[330px] lg:h-[843px]'>
-        <div className="p-[15px] lg:p-[50px] border-[2px] border-[#000] rounded-[20px] bg-[#fff]"> 
+        <div className="p-[15px] lg:p-[30px] border-[2px] border-[#000] rounded-[20px] bg-[#fff]"> 
         <label  className='py-[15px]'>Full Name</label>
          <input type="text"className='my-[10px] w-[290px] lg:w-[563px] h-[63px] rounded-[10px] bg-lightb text-[#000] outline-none'/>
          <label className='py-[15px]'> Legal Business name</label>
@@ -96,7 +96,7 @@ const Contactus = () => {
          </div>
          </div>
          <div className="flex justify-center">
-         <div className="flex items-center w-[233.21px] my-[40px] h-[64.02px] rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-linear2 shadowed text-center ">
+         <div className="flex items-center cursor-pointer w-[233.21px] my-[40px] h-[64.02px] rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-linear2 shadowed text-center ">
        <button className=' text-[21.44px] ml-[80px] leading-[21.72px] font-medium text-[#fff]'>Submit</button>
        </div>
          </div>

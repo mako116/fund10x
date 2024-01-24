@@ -4,7 +4,7 @@ const Homesecton = () => {
   return (
     <>
     <div className=" bg-[#ffffff] w-full h-full inter overflow-hidden ">
-    <div className="lg:p-padding113  p-[10px] pl-[20px] lg:inline-flex flex flex-col lg:flex-row justify-center items-center lg:gap-[127.736px]  gap-[127.736px] ">
+    <div className="lg:p-padding113  p-[10px] pl-[30px] lg:inline-flex flex flex-col lg:flex-row justify-center items-center lg:gap-[127.736px]  gap-[127.736px] ">
     <div className='pt-[40px] pr-[29px] relative'>
     <div className='bg-linear2  inline-flex lg:p-padding41 p-[13px] lg:justify-center flex-col gap-[20.344px] items-start lg:items-start rounded-[23.893px]'>
       <div>
@@ -93,7 +93,7 @@ const Homesecton = () => {
             </div>
             </div>
 
-            <div className='flex border-[0.943px] border-solid border-[#fff] absolute bottom-[-95px] lg:bottom-[-20px] lastcolor shadowed left-[8px] lg:left-[5px] lg:p-pad-24 p-[10px]'>
+            <div className='flex border-[0.943px] border-solid border-[#fff] absolute bottom-[-85px] lg:bottom-[-20px] lastcolor shadowed left-[0px] lg:left-[5px] lg:p-pad-24 p-[5px]'>
             {/* left side  */}
             <div className='flex flex-col border-[0.943px] border-solid border-[#fff] lg:p-pad-12 p-[15px] justify-center gap-[4.713px] items-start rounded-[5.655px] bg-linear2'>
               <h5 className=' text-[#fff] font-medium leading-[145.523%] font-style'>Capital fund</h5>

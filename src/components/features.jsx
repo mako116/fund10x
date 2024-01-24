@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <>
      <div className=" bg-[#f6f8ff]">
-     <div className="flex justify-center pt-[80px]">
+     <div className="flex justify-center pt-[40px]">
     
      <div className=' z-[-10000px] shadowed-box absolute mt-[5px] ml-[20px]'>
      <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 434 79" fill="none">

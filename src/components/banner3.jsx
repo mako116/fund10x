@@ -38,10 +38,10 @@ const Banner3 = () => {
     <>
      <div  className="overflow-hidden flex w-full h-full inter py-[50px] lg:py-[150px] gap-[100px] text-[#fff] lg:flex-row flex-col justify-center items-center">
      {items.map((item)=>(
-      <div key={item.id} className="flex lg:w-[381.07px] w-[100px] h-[140px] lg:h-[480.392px] p-padd79 p-[15px] flex-col items-center flex-shrink-0  
+      <div key={item.id} className="flex lg:w-[381.07px] w-[100px] h-[140px] lg:h-[180.392px] p-padd79 p-[15px] flex-col items-center flex-shrink-0  
       rounded-[20.27px] border-[2.027px] border-solid border-[#000] bg-linear2 shadowed">
          <div  className="w-[60.688px] h-[60.688px] flex-shrink-0 ">
-        <svg>{item.imageUrl}</svg>
+        <svg className="">{item.imageUrl}</svg>
          <div className="inline-flex flex-col items-start gap-[19px] relative top-[-80px]">
          <h4 className="text-strokes-combine w-[219px]">{item.text}</h4>
           <p className="w-[293px] h-[75px] text-[19.44px] font-style font-medium leading-[145.523%] ">{item.paragraph}</p>

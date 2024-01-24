@@ -56,7 +56,7 @@ const Heads = () => {
           {menuOpen ? (
             <MdClose
               onClick={() => setMenuOpen(false)}
-              className="text-white text-2xl cursor-pointer"
+              className="text-black text-2xl cursor-pointer w-full"
             />
           ) : (
             <MdMenu
@@ -76,7 +76,7 @@ const Heads = () => {
             leaveTo="opacity-0"
             className="bg-grayed"
           >
-            <div className="absolute top-0 right-0 w-[70%] bg-gray-200  p-4 rounded-b-[5px] shadow-md">
+            <div className="absolute top-0 right-0 py-[50px] w-[50%] px-[20px] bg-gray-200  p-4 rounded-b-[5px] shadow-md">
               <ul className="flex flex-col space-y-2">
               <Link href="/" className=" text-[15px] block text-blacks  font-medium leading-[21.72px] cursor-pointer">
               <li className="text-black ">Home
@@ -104,9 +104,6 @@ const Heads = () => {
             </div>
           </Transition>
         </div>
-       <div className='bg-black w-full h-full'>
-
-       </div>
         </div>
        
       </nav>
