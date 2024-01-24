@@ -23,18 +23,18 @@ const Footer = () => {
       <h2 className="text-[#fff] mb-[40px] w-[114px] h-[30px] font-medium lg:text-[24.95px] text-[18px] leading-[30.2px] py-[5px]">Company</h2>
       <Link href="/about"><span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">About Us</span></Link>
       <Link href="/contacts"><span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">Contact Us</span></Link>
-      <span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">FAQ</span>
+      <span className="text-grayed font-medium lg:text-[22.15px] cursor-pointer text-[14px] leading-[26.8px]">FAQ</span>
       </div>
-      <div className="flex flex-col gap-[10px]">
-      <h2 className="text-[#fff] mb-[40px] w-full lg:w-[114px] h-full lg:h-[30px] font-medium text-[24.95px] leading-[30.2px] py-[5px]">Legal</h2>
-      <span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">Terms</span>
-      <span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">Privacy</span>
+      <div className="flex flex-col gap-[10px] ">
+      <h2 className="text-[#fff] mb-[40px]  w-full lg:w-[114px] h-full lg:h-[30px] font-medium text-[24.95px] leading-[30.2px] py-[5px]">Legal</h2>
+      <span className="text-grayed font-medium cursor-pointer lg:text-[22.15px] text-[14px] leading-[26.8px]">Terms</span>
+      <span className="text-grayed font-medium cursor-pointer lg:text-[22.15px] text-[14px] leading-[26.8px]">Privacy</span>
        </div>
       <div className="flex flex-col gap-[10px]">
       <h2 className="text-[#fff] mb-[40px] w-full h-full lg:w-[114px] lg:h-[30px] font-medium lg:text-[24.95px] text-[18px] leading-[30.2px] py-[5px]">Resources</h2>
-      <span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">Blog</span>
-      <span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">Press</span>
-      <span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">Career</span>
+      <span className="text-grayed font-medium cursor-pointer lg:text-[22.15px] text-[14px] leading-[26.8px]">Blog</span>
+      <span className="text-grayed font-medium cursor-pointer lg:text-[22.15px] text-[14px] leading-[26.8px]">Press</span>
+      <span className="text-grayed font-medium cursor-pointer lg:text-[22.15px] text-[14px] leading-[26.8px]">Career</span>
       </div>
      
      
