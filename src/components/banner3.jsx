@@ -53,6 +53,7 @@ const Banner3 = () => {
          ))}
      
     </div>
+<<<<<<< HEAD
     <div className="spacebtn ">
       <Link href="/bussiness">
     <button className="sectionbutton colored_bg shadowed ">
@@ -65,6 +66,15 @@ const Banner3 = () => {
     </button>
     </Link>
      </div>
+=======
+    <div className="flex gap-[40px] items-center justify-center pb-[40px]">
+     <div className="flex items-center  mt-[40px] investbtn rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-gradient-to-r from-linear1 to-linear2 shadowed text-center ">
+    <button className='text-[15px] lg:text-[21.44px] ml-[5px] lg:ml-[40px] leading-[21.72px] font-medium text-[#fff]'>Join the waitlist.</button>
+    </div>
+    <div className="flex items-center  mt-[40px] investbtn rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-whiting shadowed text-center ">
+    <button className='text-[15px] lg:text-[21.44px] lg:ml-[40px] ml-[5px] leading-[21.72px] font-medium text-[#00]'>Speak to Us </button>
+    </div>
+>>>>>>> f6ff4deef0092cb5dc4cf5dd495f2b450ff72da5
      </div>
       </>
   )
