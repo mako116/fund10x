@@ -1,0 +1,24 @@
+/* styles/globals.css or any global CSS file */
+
+/* components/TestimonialSlider.module.css */
+
+.testimonialSlider {
+    width: 100%;
+  }
+  
+  .slide {
+    padding: 20px;
+  }
+  
+  .slideContent {
+    background-color: #f0f0f0; /* Background color for the slide */
+    padding: 20px;
+  }
+  
+  .slide img {
+    width: 100px; /* Adjust image size as needed */
+    height: 100px; /* Adjust image size as needed */
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  

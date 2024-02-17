@@ -10,13 +10,14 @@ import Footer from '../footer/footer'
 const Allsection = () => {
   return (
     <>
+    <div className="overflow-hidden">
      <Herosection/>
      <Homesecton/> 
      <InvestorsH/>
      <Features/>
      <Testimonialed/>
      <Banner4/>
-     <Footer/>
+     </div>
     </>
   )
 }

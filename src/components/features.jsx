@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <>
      <div className=" bg-[#f6f8ff]">
-     <div className="flex justify-center pt-[40px]">
+     <div className="featured malnrs">
     
      <div className=' z-[-10000px] shadowed-box absolute mt-[5px] ml-[20px]'>
      <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 434 79" fill="none">
@@ -15,7 +15,7 @@ const Features = () => {
      </svg>
      </div>
      <div className='shadowed-tree relative'>
-     <svg className='z-[100000px]'  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 82" fill="none">
+     <svg className='z-[100000px] '  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 82" fill="none">
   <path d="M2 63.3137V19.0092C2 9.6685 9.6671 2.14699 19.0061 2.32603L418.037 9.97594C434.861 10.2985 440.685 32.4968 426.186 41.0367L363.957 77.6913C361.39 79.2028 358.466 80 355.488 80H18.6863C9.4707 80 2 72.5293 2 63.3137Z" fill="url(#paint0_linear_461_2004)" stroke="black" stroke-width="2.78105"/>
   <defs>
     <linearGradient id="paint0_linear_461_2004" x1="177.097" y1="-40.6866" x2="322.037" y2="172.705" gradientUnits="userSpaceOnUse">
@@ -25,7 +25,7 @@ const Features = () => {
     </linearGradient>
     
   </defs>
-  <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="white" font-size="40">
+  <text x="50%" y="70%" alignment-baseline="middle" text-anchor="middle" fill="white"   className='fons_size'>
   Features
   </text>
      </svg>
@@ -39,3 +39,4 @@ const Features = () => {
 }
 
 export default Features
+

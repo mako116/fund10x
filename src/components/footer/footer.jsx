@@ -8,10 +8,10 @@ import Link from 'next/link'
 const Footer = () => {
   return ( 
     <>
-      <div className="w-full h-full malnr bg-black">
-      <div className="pt-[100px] C_grid lg:gap-[60px]">
-      <div className="flex flex-col">
-      <div className="lg:w-[140px] w-full">
+      <div className="w-full h-full malnred bg-black">
+      <div className="footerFlex">
+      <div className="footers">
+      <div className="lg:w-[99.5px] w-full">
      <Link href="/"><Image width={100} height={30} src={logo} className="lg:w-[190px] w-[50px]"/></Link>
       </div>
       <h3 className="lg:w-[413px] w-full lg:h-[88px] h-full pt-[19px] font-medium lg:text-[30.15px] text-[18px] leading-[36.49px] text-[#fff]">Matching viable businesses with the right investors</h3>
@@ -19,6 +19,7 @@ const Footer = () => {
       3 Denis street, MorningSide, 2196
       Johannesburg, South Africa</p>
       </div>
+      <div className="footersnavs">
       <div className="flex flex-col lg:w-[119px] w-full h-full lg:h-[168.85px] gap-[10px]">
       <h2 className="text-[#fff] mb-[40px] w-[114px] h-[30px] font-medium lg:text-[24.95px] text-[18px] leading-[30.2px] py-[5px]">Company</h2>
       <Link href="/about"><span className="text-grayed font-medium lg:text-[22.15px] text-[14px] leading-[26.8px]">About Us</span></Link>
@@ -36,6 +37,8 @@ const Footer = () => {
       <span className="text-grayed font-medium cursor-pointer lg:text-[22.15px] text-[14px] leading-[26.8px]">Press</span>
       <span className="text-grayed font-medium cursor-pointer lg:text-[22.15px] text-[14px] leading-[26.8px]">Career</span>
       </div>
+      </div>
+    
      
      
       </div>

@@ -2,8 +2,7 @@ import React from 'react'
 import Heads from '../header/Heads'
 import Image from 'next/image'
 import happy from "../../../public/images/happymix.svg"
-import Footer from '../footer/footer'
-const Abouts = () => {
+ const Abouts = () => {
   return (
     <>
       <div className="bg-linear2 w-full h-full z-[-2000px]">
@@ -59,9 +58,7 @@ const Abouts = () => {
      <button className=' text-[21.44px] ml-[40px] leading-[21.72px] font-medium text-[#fff]'>Join the waitlist</button>
      </div>
      </div>
-     <div className="">
-     <Footer/>
-     </div>
+     
       </div>
     </>
   )
