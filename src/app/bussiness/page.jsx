@@ -7,7 +7,7 @@ const page = () => {
     <div className="Bussin_inves bg-img">
     <div className="py-[30px] malnred ml-[70px] flex items-center">
      <MainBusiness/>
-     </div>
+     </div> 
      </div>
    </>
  )
