@@ -11,7 +11,7 @@ import { FreeMode, Autoplay } from "swiper/modules";
 
 const TestimonialSlider = ({ testimonials }) => {
   return (
-    <div className="w-full ">
+    <div className="w-full testimonialSlider ">
       <Swiper
         slidesPerView={3}
         freeMode={true}

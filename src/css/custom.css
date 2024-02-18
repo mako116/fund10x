@@ -273,6 +273,11 @@
   padding-left: 40px;
 }
 
+.testimonialSlider {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 /* .hasMarL {
   margin-left: 50px;
 } */
@@ -724,6 +729,11 @@
 
   .banner4 {
     display: none;
+  }
+
+  .testimonialSlider {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   /* .swiper-slide {
