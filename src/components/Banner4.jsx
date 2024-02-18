@@ -4,7 +4,7 @@ import Link from "next/link";
 const Banner4 = () => {
   return (
     <>
-      <div className="w-full bg-linear2">
+      <div className="banner4 w-full bg-linear2">
         <div className="pt-[98px] malnr">
           <Link href="/contacts?type=business">
             <Image

@@ -96,7 +96,7 @@ const items = [
 const Banner3 = () => {
   return (
     <>
-      <div className="w-full h-full malnred">
+      <div className="w-full malnred">
         <div className="featured_head   text-[#fff] inter   items-center">
           {items.map((item) => (
             <div key={item.id} className="featured_box bg-linear2 shadowss">

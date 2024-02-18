@@ -18,7 +18,7 @@ const Herosection = () => {
             Fund10x, a funding platform that enables you to grow your business,
             with the right capital, in the right manner
           </p>
-          <div className="flex lg:justify-start justify-center gap-[30px] lg:gap-[58.59px] lg:w-[506.39px] w-full h-full lg:h-[68.59px] mt-[20px]">
+          <div className="homescreenFlex flex lg:justify-start justify-center gap-[30px] lg:gap-[58.59px] lg:w-[506.39px] w-full h-full lg:h-[68.59px] mt-[20px]">
             <div className="  ">
               <Link href="/contacts?type=investor">
                 <button className="shadowed siteButton homebuttons mt-[15px] text-[15px] lg:text-[17.95px] p-paddi leading-[21.72px] font-medium text-[#fff]">

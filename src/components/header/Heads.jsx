@@ -25,7 +25,7 @@ const Heads = () => {
         >
           <div className="logo">
             <Link href="/">
-              <Image width={100} height={20} src={LOGO} className="logos" />
+              <Image width={100} height={20} src={FUND} className="logos" />
             </Link>
           </div>
           <button

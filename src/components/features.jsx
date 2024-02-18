@@ -6,7 +6,7 @@ import features from "../assests/Vector 8.png";
 const Features = () => {
   return (
     <>
-      <div className=" bg-[#f6f8ff]">
+      <div className="allFeatures bg-[#f6f8ff]">
         <div className="featured malnrs">
           <div className=" z-[-10000px] shadowed-box absolute mt-[5px] ml-[20px]">
             <svg

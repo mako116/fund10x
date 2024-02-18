@@ -27,8 +27,8 @@ const TestimonialSlider = ({ testimonials }) => {
         className="mySwiper"
         breakpoints={{
           640: {
-            slidesPerView: 2,
-            spaceBetween: 50,
+            slidesPerView: 1,
+            spaceBetween: 10,
           },
           768: {
             slidesPerView: 2,

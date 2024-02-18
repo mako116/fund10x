@@ -6,7 +6,7 @@ import Link from "next/link";
 const Banner2 = () => {
   return (
     <>
-      <div className="w-full bg-img pb-[50px] lg:pb-[0px] py-[0px] lg:py-[0px] px-[30px] inter text-[#000]">
+      <div className="investorsHBG w-full bg-img pb-[50px] lg:pb-[0px] py-[0px] lg:py-[0px] px-[30px] inter text-[#000]">
         <div className=" justify-center gap-[40px] lg:gap-[140px] lg:mt-[130px] mt-[0px] flex lg:flex-row flex-col items-center">
           <div className="lg:w-[600px] w-full lg:gap-[32px] lg:mt-[0px] mt-[70px] items-center">
             <h3 className=" font-normal lg:text-[24.44px] leading-[35.57px] text-[#000]">

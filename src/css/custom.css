@@ -273,9 +273,9 @@
   padding-left: 40px;
 }
 
-.hasMarL {
+/* .hasMarL {
   margin-left: 50px;
-}
+} */
 
 .slick_heads {
   width: 100% !important;
@@ -631,8 +631,107 @@
 }
 
 @media screen and (max-width: 480px) {
+  .divMobile .logos {
+    width: 100px;
+    height: auto;
+  }
+
+  .homescreenFlex {
+    flex-direction: column !important;
+    row-gap: 10px;
+    width: 100% !important;
+  }
+
+  .homescreenFlex a {
+    width: 100% !important;
+  }
+
+  .homescreenFlex a .homebuttons,
+  .homescreenFlex a .homebuttons2 {
+    width: 100% !important;
+  }
+
+  .homeShapes {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  .homeHeads2,
+  .homeHeader {
+    font-size: 38px !important;
+    line-height: 38px !important;
+  }
+
+  .homeparagraph {
+    font-size: 15px !important;
+    line-height: 28px !important;
+  }
+
+  .box_right {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+
+  .investorsHBG {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  .investorsHImageContainer {
+    width: 100% !important;
+  }
+
+  .sectionbutton {
+    width: 95% !important;
+    margin: 10px auto !important;
+    text-align: center !important;
+  }
+
+  .investorsHFlex {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 0px !important;
+    row-gap: 20px !important;
+    margin-top: 60px;
+  }
+
+  .investorsHFlex .investbtn {
+    width: 100% !important;
+  }
+
+  .allFeatures .w-full.malnred {
+    width: 90% !important;
+    margin: 10px auto !important;
+    margin-left: 5px !important;
+  }
+
+  .allFeatures .spacebtn {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 0px !important;
+    row-gap: 20px !important;
+  }
+
+  .allFeatures .spacebtn a {
+    width: 100% !important;
+    margin-right: -20px !important;
+  }
+
   .contactUsButton {
     flex-direction: column;
     row-gap: 40px;
   }
+
+  .banner4 {
+    display: none;
+  }
+
+  /* .swiper-slide {
+    width: 90% !important;
+    margin-left: 15px !important;
+  }
+
+  .hasMarL {
+    margin-left: 0px;
+  } */
 }
