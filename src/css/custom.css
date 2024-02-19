@@ -408,6 +408,7 @@
   border-radius: 20px;
 }
 
+.contactUsWrapper .formContainer textarea,
 .contactUsWrapper .formContainer select,
 .contactUsWrapper .formContainer input[type="text"],
 .contactUsWrapper .formContainer input[type="email"] {
@@ -681,6 +682,11 @@
     font-size: 14px !important;
   }
 
+  .slick_header h3 {
+    font-size: 18px !important;
+    line-height: 15px !important;
+  }
+
   .homescreenShow {
     width: 100% !important;
   }
@@ -717,6 +723,34 @@
     padding-top: 50px !important;
   }
 
+  .featured_head {
+    margin-top: 50px !important;
+  }
+
+  .featured_box {
+    width: 100% !important;
+    height: 330px !important;
+  }
+  .banner3_p {
+    font-size: 16px !important;
+  }
+
+  .investorsH {
+    padding-top: 30px !important;
+  }
+
+  .investorsHBGFlexGap {
+    justify-content: flex-start !important;
+  }
+
+  .investorsHBGFlexGap .tabss {
+    padding: 10px 12px;
+  }
+
+  .investorsHBGFlexGap .tabss p {
+    font-size: 16px !important;
+  }
+
   .contactUsWrapper .formContainer {
     padding: 15px;
   }
@@ -732,10 +766,29 @@
   .contactUsWrapper .checkboxLable {
     font-size: 16px !important;
   }
+
+  .contactUsWrapper button.site_button {
+    display: block !important;
+    width: 100% !important;
+    height: 60px !important;
+    text-align: center !important;
+  }
+
+  .contactUsWrapper button.site_button span {
+    font-size: 16px !important;
+    margin: 0px !important;
+  }
+
   .footerFlex {
     /* display: flex; */
     gap: unset !important;
     display: block !important;
+  }
+
+  .footersnavs h2,
+  .footers h3 {
+    font-size: 18px !important;
+    line-height: 20px !important;
   }
 
   .footers p {

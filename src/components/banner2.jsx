@@ -83,7 +83,7 @@ const Banner2 = () => {
               Explore the financial revolution by backing innovative fintech
               solutions and shape the future of banking..
             </h3>
-            <div className="flex gap-[13.07px] max-width-[600px] items-center justify-center lg:justify-start lg:items-start text-start flex-wrap my-[20px] py-[10px]">
+            <div className="investorsHBGFlexGap flex gap-[13.07px] max-width-[600px] items-center justify-center lg:justify-start lg:items-start text-start flex-wrap my-[20px] py-[10px]">
               {tabs &&
                 tabs?.map((tab, index) => (
                   <div
