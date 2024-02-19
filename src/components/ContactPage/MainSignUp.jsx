@@ -11,6 +11,23 @@ export const validEmail = (email) => {
   return emailReg.test(email);
 };
 
+export const formateInvestmentNumbers = (str) => {
+  let cleanedString = str
+    .replace(/\$|,/g, "")
+    .replace("$", "")
+    .replace("-", "")
+    .replace(",", "");
+  // Split the string by space
+  let resultArray = cleanedString.split(" ");
+
+  // Convert string elements to numbers
+  resultArray = resultArray
+    ?.filter((num) => num !== "")
+    .map((num) => parseInt(num, 10));
+
+  return resultArray;
+};
+
 const ForInvestors = () => {
   const [isLoading, setIsLoading] = useState({
     status: false,
@@ -25,13 +42,23 @@ const ForInvestors = () => {
   const [country, setCountry] = useState("");
   const [emptyFields, setEmptyFields] = useState(true);
   const [emailError, setEmailError] = useState("");
+  const [selectedCountryDetails, setSelectedCountryDetails] = useState(null);
 
   const [firmName, setFirmName] = useState("");
   const [investorType, setInvestorType] = useState("");
-  const [minimumInvestmentTop, setMinimumInvestmentTop] = useState(0);
-  const [minimumInvestmentBottom, setMinimumInvestmentBottom] = useState(0);
+  const [minimumInvestment, setMinimumInvestment] = useState("");
 
   const [isChecked, setIsChecked] = useState(false);
+
+  const investments = [
+    "$0 - $20000",
+    "$20000 - $50,000",
+    "$50,000 - $100,000",
+    "$100,000 - $250,000",
+    "$250,000 - $500,000",
+    "$250,000 - $500,000",
+    "$1,000,000 - Above",
+  ];
 
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
@@ -48,13 +75,25 @@ const ForInvestors = () => {
     setCountry("");
     setEmailError("");
     setEmptyFields(true);
-    setMinimumInvestmentTop(0);
-    setMinimumInvestmentBottom(0);
+    setMinimumInvestment("");
+    setSelectedCountryDetails(null);
     setIsLoading({
       status: false,
       message: "",
     });
   };
+
+  useEffect(() => {
+    if (country) {
+      let selectedCountry = allCountries?.find((item) => item?.name == country);
+
+      // console.log("country", country);
+      // console.log("selectedCountry", selectedCountry);
+      if (selectedCountry) {
+        setSelectedCountryDetails(selectedCountry);
+      }
+    }
+  }, [country]);
 
   useEffect(() => {
     validateForms();
@@ -65,8 +104,7 @@ const ForInvestors = () => {
     phone,
     firmName,
     investorType,
-    minimumInvestmentTop,
-    minimumInvestmentBottom,
+    minimumInvestment,
     jobTitle,
     country,
     emailError,
@@ -112,15 +150,20 @@ const ForInvestors = () => {
       setEmptyFields(true);
       return;
     }
-    if (minimumInvestmentTop === 0) {
-      setEmptyFields(true);
-      return;
-    }
 
-    if (minimumInvestmentBottom === 0) {
+    if (minimumInvestment === "") {
       setEmptyFields(true);
       return;
     }
+    // if (minimumInvestmentTop === 0) {
+    //   setEmptyFields(true);
+    //   return;
+    // }
+
+    // if (minimumInvestmentBottom === 0) {
+    //   setEmptyFields(true);
+    //   return;
+    // }
     if (country === "") {
       setEmptyFields(true);
       return;
@@ -142,18 +185,32 @@ const ForInvestors = () => {
       message: "Adding new Investor...",
     });
 
+    let allInvestment = [];
+
+    if (minimumInvestment === "$1,000,000 - Above") {
+      allInvestment = [1000000, 5000000];
+    } else {
+      let formated = formateInvestmentNumbers(minimumInvestment);
+
+      allInvestment = formated;
+    }
+
+    // console.log("allInvestment", allInvestment);
+
     let payload = {
       firstName: firstName,
       lastName: lastName,
       email: email,
-      phone: phone,
+      phone: selectedCountryDetails?.dialCode + phone,
       firmName: firmName,
       investorType: investorType,
-      minimumInvestmentTop: minimumInvestmentTop,
-      minimumInvestmentBottom: minimumInvestmentBottom,
+      minimumInvestmentTop: allInvestment[0],
+      minimumInvestmentBottom: allInvestment[1],
       jobTitle: jobTitle,
       country: country,
     };
+
+    // console.log("payload", payload);
 
     try {
       const response = await axios.post(
@@ -186,6 +243,10 @@ const ForInvestors = () => {
       toast.error(errorMessage);
     }
   };
+
+  // const handleMinimumInvestment = (value) => {
+
+  // }
 
   return (
     <>
@@ -243,21 +304,49 @@ const ForInvestors = () => {
               </div>
 
               <div className="mt-4 w-full">
-                <label>Phone</label>
-                <input
-                  type="text"
-                  value={phone}
+                <label>Country</label>
+                <select
+                  value={country}
                   onChange={(e) => {
-                    let inputValue = event.target.value;
-                    // Remove any non-numeric characters using a regular expression
-                    let numericValue = inputValue.replace(/\D/g, "");
-
-                    setPhone(numericValue);
+                    if (e.target?.value === "") {
+                      return;
+                    }
+                    setCountry(e.target.value);
                   }}
-                  maxLength={10}
-                  placeholder="8025777224"
-                />
+                >
+                  <option value="" className="text-[13px] lg:text-[22.2px]">
+                    Select country
+                  </option>
+                  {allCountries &&
+                    allCountries?.map((country, index) => (
+                      <option key={index} value={country?.name}>
+                        {country?.name}
+                      </option>
+                    ))}
+                </select>
               </div>
+
+              {country && selectedCountryDetails && (
+                <div className="mt-4 w-full">
+                  <label>Phone</label>
+                  <div className="apenndedInput">
+                    <span>{selectedCountryDetails?.dialCode}</span>
+                    <input
+                      type="text"
+                      value={phone}
+                      onChange={(e) => {
+                        let inputValue = event.target.value;
+                        // Remove any non-numeric characters using a regular expression
+                        let numericValue = inputValue.replace(/\D/g, "");
+
+                        setPhone(numericValue);
+                      }}
+                      maxLength={10}
+                      placeholder="8025777224"
+                    />
+                  </div>
+                </div>
+              )}
 
               <div className="mt-4 w-full">
                 <label>Firm name</label>
@@ -292,8 +381,29 @@ const ForInvestors = () => {
                   </select>
                 </div>
               </div>
-
               <div className="mt-4 w-full">
+                <label>Minimum Investment</label>
+                <div className="selectContainer">
+                  <select
+                    value={minimumInvestment}
+                    onChange={(e) => {
+                      if (e.target?.value === "") {
+                        return;
+                      }
+
+                      setMinimumInvestment(e.target.value);
+                    }}
+                  >
+                    <option value="">Select investment</option>
+                    {investments &&
+                      investments?.map((item, index) => (
+                        <option value={item}>{item}</option>
+                      ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* <div className="mt-4 w-full">
                 <label>Minimum Investment Top</label>
                 <input
                   value={minimumInvestmentTop}
@@ -319,7 +429,7 @@ const ForInvestors = () => {
                   type="text"
                   placeholder="0"
                 />
-              </div>
+              </div> */}
 
               <div className="mt-4 w-full">
                 <label>Job Title</label>
@@ -329,29 +439,6 @@ const ForInvestors = () => {
                   type="text"
                   placeholder="Job title"
                 />
-              </div>
-
-              <div className="mt-4 w-full">
-                <label>Country</label>
-                <select
-                  value={country}
-                  onChange={(e) => {
-                    if (e.target?.value === "") {
-                      return;
-                    }
-                    setCountry(e.target.value);
-                  }}
-                >
-                  <option value="" className="text-[13px] lg:text-[22.2px]">
-                    Select country
-                  </option>
-                  {allCountries &&
-                    allCountries?.map((country, index) => (
-                      <option key={index} value={country?.name}>
-                        {country?.name}
-                      </option>
-                    ))}
-                </select>
               </div>
 
               <div className="checkbox ml-[25px] lg:ml-[5px] text-[13px] lg:text-[22.2px]">

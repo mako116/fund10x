@@ -31,6 +31,8 @@ const ForBusiness = () => {
   const [investmentStage, setInvestmentStage] = useState("");
   const [businessWebsite, setBusinessWebsite] = useState("");
 
+  const [selectedCountryDetails, setSelectedCountryDetails] = useState(null);
+
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleCheckbox = () => {
@@ -50,11 +52,22 @@ const ForBusiness = () => {
     setCountry("");
     setEmailError("");
     setEmptyFields(true);
+    setSelectedCountryDetails(null);
     setIsLoading({
       status: false,
       message: "",
     });
   };
+
+  useEffect(() => {
+    if (country) {
+      let selectedCountry = allCountries?.find((item) => item?.name == country);
+
+      if (selectedCountry) {
+        setSelectedCountryDetails(selectedCountry);
+      }
+    }
+  }, [country]);
 
   useEffect(() => {
     validateForms();
@@ -143,7 +156,7 @@ const ForBusiness = () => {
       firstName: firstName,
       lastName: lastName,
       email: email,
-      phone: phone,
+      phone: selectedCountryDetails?.dialCode + phone,
       businessName: businessName,
       businessType: businessType,
       businessWebsite: businessWebsite,
@@ -240,21 +253,49 @@ const ForBusiness = () => {
               </div>
 
               <div className="mt-4 w-full">
-                <label>Phone</label>
-                <input
-                  type="text"
-                  value={phone}
+                <label>Country</label>
+                <select
+                  value={country}
                   onChange={(e) => {
-                    let inputValue = event.target.value;
-                    // Remove any non-numeric characters using a regular expression
-                    let numericValue = inputValue.replace(/\D/g, "");
-
-                    setPhone(numericValue);
+                    if (e.target?.value === "") {
+                      return;
+                    }
+                    setCountry(e.target.value);
                   }}
-                  maxLength={10}
-                  placeholder="8025777224"
-                />
+                >
+                  <option value="" className="text-[13px] lg:text-[22.2px]">
+                    Select country
+                  </option>
+                  {allCountries &&
+                    allCountries?.map((country, index) => (
+                      <option key={index} value={country?.name}>
+                        {country?.name}
+                      </option>
+                    ))}
+                </select>
               </div>
+
+              {country && selectedCountryDetails && (
+                <div className="mt-4 w-full">
+                  <label>Phone</label>
+                  <div className="apenndedInput">
+                    <span>{selectedCountryDetails?.dialCode}</span>
+                    <input
+                      type="text"
+                      value={phone}
+                      onChange={(e) => {
+                        let inputValue = event.target.value;
+                        // Remove any non-numeric characters using a regular expression
+                        let numericValue = inputValue.replace(/\D/g, "");
+
+                        setPhone(numericValue);
+                      }}
+                      maxLength={10}
+                      placeholder="8025777224"
+                    />
+                  </div>
+                </div>
+              )}
 
               <div className="mt-4 w-full">
                 <label>Business name</label>
@@ -280,7 +321,16 @@ const ForBusiness = () => {
                     }}
                   >
                     <option value="">Select type</option>
+                    <option value="AI">AI</option>
                     <option value="Fintech">Fintech</option>
+                    <option value="Energy">Energy</option>
+                    <option value="Proptech">Proptech</option>
+                    <option value="Ecommerce">Ecommerce</option>
+                    <option value="Blockchain">Blockchain</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Mining">Mining</option>
+                    <option value="Retail">Retail</option>
                   </select>
                 </div>
               </div>
@@ -330,7 +380,7 @@ const ForBusiness = () => {
                 />
               </div>
 
-              <div className="mt-4 w-full">
+              {/* <div className="mt-4 w-full">
                 <label>Country</label>
                 <select
                   value={country}
@@ -351,7 +401,7 @@ const ForBusiness = () => {
                       </option>
                     ))}
                 </select>
-              </div>
+              </div> */}
 
               <div className="checkbox ml-[25px] lg:ml-[5px] text-[13px] lg:text-[22.2px]">
                 <Checkbox

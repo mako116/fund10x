@@ -4,7 +4,7 @@ import React from "react";
 const Homesecton = () => {
   return (
     <>
-      <div className=" bg-[#ffffff] w-full h-full inter malnred relative_motive">
+      <div className="siteWrapperDiv homesectonDiv bg-[#ffffff] w-full h-full inter malnred relative_motive">
         <div className="section_gaps">
           <div className="sectionPage ">
             <div className=" sectionBg rounded-[13px] lg:rounded-[23.893px]">

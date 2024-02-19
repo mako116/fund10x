@@ -146,7 +146,7 @@ const Testimonialed = () => {
             <div className="mt-4 ">
               <TestimonialSlider testimonials={testimonials} />
             </div>
-            <div className=" slick_buttons">
+            {/* <div className=" slick_buttons">
               <div className="flex items-center lg:w-[233.21px] w-[190px]  h-[50px] lg:h-[71.41px] rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-gradient-to-r from-linear2 to-linear2 shadowed text-center ">
                 <Link href="/contacts?type=business">
                   <button className="text-[16px] lg:text-[21.44px] ml-[40px] leading-[21.72px] font-medium text-[#fff]">
@@ -154,7 +154,7 @@ const Testimonialed = () => {
                   </button>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

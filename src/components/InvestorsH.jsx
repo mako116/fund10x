@@ -9,8 +9,8 @@ const { useNavigate } = require("react-router-dom");
 
 const InvestorsH = () => {
   return (
-    <div className="investorsH">
-      <div className=" w-full h-full bg-img lg:pb-[90px] pb-[30px] malnred">
+    <>
+      <div className="investorsH w-full h-full bg-img lg:pb-[90px] pb-[30px] malnred">
         <div className="flex justify-center  text-center items-center w-full">
           <div className="flex investorsHFlex justify-center text-center items-center gap-[78px] w-[634.47px] h-[85px]">
             <div className="flex items-center  mt-[40px] investbtn rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-gradient-to-r from-linear1 to-linear2 shadowed text-center ">
@@ -31,7 +31,7 @@ const InvestorsH = () => {
         </div>
         <Banner2 />
       </div>
-    </div>
+    </>
   );
 };
 

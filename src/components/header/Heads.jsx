@@ -13,7 +13,7 @@ const Heads = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="headerComp bg-linear2">
+    <header className="siteWrapperDiv headerComp bg-linear2">
       <div className="block md:hidden  py-4 px-4">
         <div
           className="divMobile"

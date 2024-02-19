@@ -1,9 +1,79 @@
+"use client";
 import Image from "next/image";
 import swift from "../../public/images/Frame 2389.svg";
+import investorImage1 from "../../public/images/investorImage1.svg";
+import investorImage2 from "../../public/images/investorImage2.svg";
+import investorImage3 from "../../public/images/investorImage3.svg";
 
 import "../css/styles.css";
 import Link from "next/link";
+import { useState } from "react";
+
+const tabs = [
+  {
+    id: 1,
+    name: "AI",
+    image: "/images/investorImage3.svg",
+  },
+  {
+    id: 2,
+    name: "Fintech",
+    image: "/images/Frame 2389.svg",
+  },
+  {
+    id: 3,
+    name: "Energy",
+    image: "/images/investorImage1.svg",
+  },
+  {
+    id: 4,
+    name: "Proptech",
+    image: "/images/Frame 2389.svg",
+  },
+  {
+    id: 5,
+    name: "Ecommerce",
+    image: "/images/investorImage2.svg",
+  },
+  {
+    id: 6,
+    name: "Blockchain",
+    image: "/images/Frame 2389.svg",
+  },
+  {
+    id: 7,
+    name: "Agriculture",
+    image: "/images/Frame 2389.svg",
+  },
+  {
+    id: 8,
+    name: "Manufacturing",
+    image: "/images/Frame 2389.svg",
+  },
+  {
+    id: 9,
+    name: "Mining",
+    image: "/images/Frame 2389.svg",
+  },
+  {
+    id: 10,
+    name: "Retail",
+    image: "/images/Frame 2389.svg",
+  },
+];
 const Banner2 = () => {
+  const [activeTab, setActiveTab] = useState({
+    id: 2,
+    name: "Fintech",
+    image: "/images/Frame 2389.svg",
+  });
+
+  const handleActiveTabs = (tab) => {
+    // setActiveTab(null);
+
+    setActiveTab(tab);
+  };
+
   return (
     <>
       <div className="investorsHBG w-full bg-img pb-[50px] lg:pb-[0px] py-[0px] lg:py-[0px] px-[30px] inter text-[#000]">
@@ -14,57 +84,24 @@ const Banner2 = () => {
               solutions and shape the future of banking..
             </h3>
             <div className="flex gap-[13.07px] max-width-[600px] items-center justify-center lg:justify-start lg:items-start text-start flex-wrap my-[20px] py-[10px]">
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal text-[#404040]">
-                  {" "}
-                  AI
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-lg border-gradients">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Fintech
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Energy
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Proptech
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Ecommerce
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Blockchain
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Agriculture{" "}
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Manufacturing
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Mining{" "}
-                </p>
-              </div>
-              <div className="flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] border-[0.817px] border-solid border-[#bbb]">
-                <p className="inter text-[18.07px] font-style font-normal leading-normal">
-                  Retail
-                </p>
-              </div>
+              {tabs &&
+                tabs?.map((tab, index) => (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      handleActiveTabs(tab);
+                    }}
+                    className={`tabss flex p-[15.062px] flex-col justify-center items-center gap-[15.062px] rounded-[8.16px] ${
+                      activeTab?.id === tab?.id
+                        ? "border-gradients"
+                        : "border-[1.817px] border-solid border-[#bbb]"
+                    } `}
+                  >
+                    <p className="inter text-[18.07px] font-style font-normal leading-normal">
+                      {tab?.name}
+                    </p>
+                  </div>
+                ))}
             </div>
             <div className="flex items-center justify-center lg:justify-start">
               <div className="flex items-center  mt-[40px] investbtn rounded-[11.44px] border-[0.67px] border-black p-ban-pad gap-[24.37px] bg-gradient-to-r from-linear2 to-linear2 shadowed text-center ">
@@ -77,9 +114,11 @@ const Banner2 = () => {
             </div>
           </div>
 
-          <div className="investorsHImageContainer lg:w-[550.33px]  lg:mb-[0px] w-[250px] lg:my-[10px] ">
-            <Image width={100} height={34} src={swift} />
-          </div>
+          {activeTab && (
+            <div className="investorsHImageContainer lg:w-[550.33px]  lg:mb-[0px] w-[250px] lg:my-[10px] ">
+              <Image width={100} height={34} src={activeTab?.image} />
+            </div>
+          )}
         </div>
       </div>
     </>
