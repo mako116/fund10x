@@ -73,7 +73,7 @@ const Heads = () => {
             <ul className="urlLinks">
               <Link
                 href="/about"
-                className="text-[13px] lg:text-[17.95px] block text-blacks  py-[10px] lg:pb-[0px] pb-[30px] font-normal leading-[21.72px] cursor-pointer"
+                className="text-[12.5px] lg:text-[17px] block text-blacks  py-[10px] lg:pb-[0px] pb-[30px] font-normal leading-[21.72px] cursor-pointer"
               >
                 <li className="text-black ">About Fund 10X</li>
               </Link>
